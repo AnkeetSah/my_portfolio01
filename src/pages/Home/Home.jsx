@@ -86,11 +86,11 @@ const Home = () => {
   return (
     <div className="bg-primary min-h-[calc(100vh-104px)] flex justify-center items-center gap-5">
       <div className="lg:h-[400px] xs:min-h-[calc(80vh-134px)] lg:w-[43%] flex flex-col xs:justify-between xs:items-center lg:justify-center gap-10 lg:pl-19">
-        <div className="xs:w-[80%]  lg:w-full">
+        <div className="xs:w-[85%]  lg:w-full">
           <p className="text-white font-FiraCode" ref={hiRef}>
             Hi all. I am
           </p>
-          <h2 className="text-6xl font-bold text-white font-FiraRegular" ref={nameRef}>
+          <h2 className="text-6xl xs:text-4xl font-bold text-white font-FiraRegular" ref={nameRef}>
             Ankeet Kumar Sah
           </h2>
           <h3 className="text-2xl font-semibold flex items-center gap-2 text-[#4D5BCE]">
@@ -98,7 +98,7 @@ const Home = () => {
           </h3>
         </div>
 
-        <div className="xs:w-[80%] lg:w-full" ref={githubTextRef}>
+        <div className="xs:w-[85%] lg:w-full" ref={githubTextRef}>
           <p className="text-[#607B96] font-FiraCode">// complete the game to continue</p>
           <p className="text-[#607B96] font-FiraCode">// you can also see it on my GitHub page</p>
           <p className="text-white"><span className="text-[#607B96]">const</span> <span className="text-[#43D9AD]">githubLink</span> = <span className="text-[#E99287]">"https://github.com/example/url"</span> </p>
