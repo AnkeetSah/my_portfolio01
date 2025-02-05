@@ -8,10 +8,14 @@ const Contact = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <div className="bg-primary flex min-h-[calc(100vh-104px)] xs:flex-wrap lg:flex-nowrap">
+    <div className="bg-primary flex min-h-[calc(100vh-104px)] xs:flex-col lg:flex-row lg:flex-nowrap">
       {/* Sidebar Section */}
-      
-      <div className="w-[370px] border-r border-r-border-color">
+      <h1   className="text-white lg:hidden w-full pl-2 font-FiraRegular gap-2 items-center py-2 h-[41px] relative   border-b border-r border-r-border-color cursor-pointer border-b-border-color" >
+          
+          Contact Me 
+
+        </h1>
+      <div className="xs:w-full lg:w-[370px]  border-r border-r-border-color">
         <h1 
           onClick={() => setDropdown(!dropdown)} 
           className="text-white flex pl-2 font-FiraRegular gap-2 items-center py-2 border-b cursor-pointer border-b-border-color"
@@ -44,10 +48,10 @@ const Contact = () => {
 
         </h1>
 
-        <div className='w-full h-full flex font-FiraCode xs:relative bg'>
+        <div className='w-full h-full flex font-FiraCode'>
 
           <div className=' xs:w-full lg:w-[50%] h-full border-r border-r-border-color justify-center pt-16 flex'>
-            <form action="" className='flex flex-col w-[70%]'>
+            <form action="" className='flex flex-col xs:w-[85%] lg:w-[70%]'>
               <label htmlFor="" className='text-text_primary'> _name </label>
               <input className='bg-[#011221] text-white mt-2 p-2 border border-[#546476] rounded-md' type="text" name="" id="" />
               <label className='text-text_primary' htmlFor="">_email</label>
