@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Display Example</title>
+    <!-- Include Prism CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <style>
+        .code-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #1E1E1E;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            overflow: hidden;
+            border: 2px solid #5565E8;
+        }
+
+        .code-header {
+            background: #2B2B2B;
+            padding: 12px 20px;
+            color: #FEA55F;
+            font-family: 'Consolas', monospace;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #5565E8;
+        }
+
+        pre[class*="language-"] {
+            margin: 0;
+            border-radius: 0;
+            background: #1E1E1E;
+        }
+
+        .copy-button {
+            background: #5565E8;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Consolas', monospace;
+        }
+
+        .copy-button:hover {
+            background: #C98BDF;
+            transform: translateY(-1px);
+        }
+
+        /* Custom syntax highlighting overrides */
+        .token.comment {
+            color: #C98BDF;
+        }
+
+        .token.string {
+            color: #FEA55F;
+        }
+
+        .token.function {
+            color: #5565E8;
+        }
+
+        .token.keyword {
+            color: #C98BDF;
+        }
+    </style>
+</head>
+<body style="background: #232323; padding: 20px;">
+    <div class="code-container">
+        <div class="code-header">
+            <span>example.js</span>
+            <button class="copy-button" onclick="copyCode()">Copy</button>
+        </div>
+        <pre><code class="language-javascript">
+// This is a sample function
+const button = document.querySelector('#sendBtn');
+
+const message = {
+	name: "Jonathan Davis",
+	email: "",
+	message: "",
+	date: "Thu 21 Apr"
+}
+
+button.addEventListener('click', () => {
+	form.send(message);
+})
+        </code></pre>
+    </div>
+
+    <!-- Include Prism JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script>
+        function copyCode() {
+            const codeBlock = document.querySelector('code');
+            const text = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const button = document.querySelector('.copy-button');
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+    </script>
+</body>
+</html>
