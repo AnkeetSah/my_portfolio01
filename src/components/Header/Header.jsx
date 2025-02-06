@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoMdDesktop, IoMdMenu, IoMdClose } from "react-icons/io";
 import gsap from "gsap";
 
@@ -11,6 +11,7 @@ const nav_links = [
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const location = useLocation(); // Track the current route
 
   const linksRef = useRef([]);
   const firstLiRef = useRef(null); // Reference for the "ankeet-kumar-sah" <li>
@@ -73,12 +74,11 @@ const Header = () => {
             {nav_links.map((item, index) => (
               <li
                 key={index}
-                className="xs:hidden lg:flex text-text_primary font-semibold border-r-2 h-full border-[#506f8f] flex justify-center items-center w-[125px]"
+                className={`xs:hidden lg:flex text-text_primary font-semibold border-r-2 h-full border-[#506f8f] flex justify-center items-center w-[125px] ${
+                  location.pathname === item.path ? "border-red-500" : ""
+                }`}
               >
-                <Link
-                  to={item.path}
-                  ref={(el) => (linksRef.current[index] = el)}
-                >
+                <Link to={item.path} ref={(el) => (linksRef.current[index] = el)}>
                   {item.display}
                 </Link>
               </li>
@@ -86,39 +86,49 @@ const Header = () => {
           </ul>
 
           {/* Contact Me Section for Desktop */}
-          <ul className="h-full flex items-center ">
-            <li className="xs:hidden lg:flex border-l-2 h-full text-text_primary font-semibold border-[#506f8f] flex justify-center items-center w-[120px]">
+          <ul className="h-full flex items-center">
+            <li
+              className={`xs:hidden lg:flex border-l-2 h-full text-text_primary font-semibold border-[#506f8f] flex justify-center items-center w-[120px] ${
+                location.pathname === "/contact" ? "border-red-500" : ""
+              }`}
+            >
               <Link to="/contact" ref={contactRef}>
                 _contact-me
               </Link>
             </li>
           </ul>
         </nav>
-      </header>
 
-      {/* Mobile Menu Dropdown */}
-      {menu && (
-        <ul
-          ref={menuUl}
-          className="lg:hidden absolute top-[55px] left-0 w-full h-[81vh] bg-primary z-50"
-        >
-          {nav_links.map((item, index) => (
+        {/* Mobile Menu Dropdown */}
+        {menu && (
+          <ul
+            ref={menuUl}
+            className="lg:hidden absolute top-[55px] left-0 w-full h-[81vh] bg-primary z-50"
+          >
+            {nav_links.map((item, index) => (
+              <li
+                key={index}
+                className={`text-white font-semibold border-b h-[50px] pl-4 border-[#506f8f] flex items-center ${
+                  location.pathname === item.path ? "border-red-500" : ""
+                }`}
+              >
+                <Link to={item.path} onClick={() => setMenu(false)}>
+                  {item.display}
+                </Link>
+              </li>
+            ))}
             <li
-              key={index}
-              className="text-white font-semibold border-b h-[50px] pl-4 border-[#506f8f] flex items-center"
+              className={`lg:hidden text-white font-semibold border-b h-[50px] pl-4 border-[#506f8f] flex items-center ${
+                location.pathname === "/contact" ? "border-red-500" : ""
+              }`}
             >
-              <Link to={item.path} onClick={() => setMenu(false)}>
-                {item.display}
+              <Link to="/contact" onClick={() => setMenu(false)}>
+                _contact-me
               </Link>
             </li>
-          ))}
-          <li className="lg:hidden text-white font-semibold border-b h-[50px] pl-4 border-[#506f8f] flex items-center">
-            <Link to="/contact" onClick={() => setMenu(false)}>
-              _contact-me
-            </Link>
-          </li>
-        </ul>
-      )}
+          </ul>
+        )}
+      </header>
     </>
   );
 };
