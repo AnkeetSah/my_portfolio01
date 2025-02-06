@@ -58,6 +58,8 @@ const Contact = () => {
               <input className='bg-[#011221] text-white mt-2 p-2 border border-[#546476] rounded-md'  type="email" name="" id="" />
               <label className='text-text_primary' htmlFor="#">_message</label>
               <textarea  className='bg-[#011221] text-white mt-2 p-2 border border-[#546476] active:border-[#607B96] rounded-md ' rows={5} name="" id=""></textarea>
+             
+              <button   className='text-left mt-3 text-[#FFFFFF] bg-[#111f2d] py-2 px-3 rounded-xl w-[163px]'  type="submit">submit message</button>
             </form>
           </div>
          
