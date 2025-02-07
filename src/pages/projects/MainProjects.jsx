@@ -12,7 +12,7 @@ const MainProjects = () => {
           <div>
             <FaNodeJs className="bg-[#86E1F9] text-[#011221] absolute right-3 top-3 text-3xl p-1 rounded-[3px]" />
             <img
-              src="../../../public/assests/images/Rectangle 42.png"
+              src="../../../assests/images/Rectangle 42.png"
               className="w-full"
               alt=""
             />
@@ -34,7 +34,7 @@ const MainProjects = () => {
             <FaNodeJs className="bg-[#86E1F9] text-[#011221] absolute right-3 top-3 text-3xl p-1 rounded-[3px]" />
 
             <img
-              src="../../../public/assests/images/Rectangle 42.png"
+              src="../../../assests/images/Rectangle 42.png"
               className="w-full"
               alt=""
             />
@@ -57,7 +57,7 @@ const MainProjects = () => {
           <div>
             <FaNodeJs className="bg-[#86E1F9] text-[#011221] absolute right-3 top-3 text-3xl p-1 rounded-[3px]" />
             <img
-              src="../../../public/assests/images/Rectangle 42.png"
+              src="../../../assests/images/Rectangle 42.png"
               className="w-full"
               alt=""
             />
