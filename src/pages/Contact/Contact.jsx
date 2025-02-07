@@ -8,7 +8,7 @@ const Contact = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <div className="bg-primary flex min-h-[calc(100vh-104px)] xs:flex-col lg:flex-row lg:flex-nowrap">
+    <div className="bg-primary flex min-h-[calc(100vh-55px)] xs:flex-col lg:flex-row lg:flex-nowrap">
       {/* Sidebar Section */}
       <h1   className="text-white lg:hidden w-full pl-2 font-FiraRegular gap-2 items-center py-2 h-[41px] relative   border-b border-r border-r-border-color cursor-pointer border-b-border-color" >
           
@@ -38,7 +38,7 @@ const Contact = () => {
       </div>
 
       {/* Main Content */}
-      <div className="w-full  ">
+      <div className="w-full h-full  ">
       <h1 
          
           className="text-white xs:hidden lg:flex pl-2 font-FiraRegular gap-2 items-center py-2 h-[41px] relative   border-b border-r border-r-border-color cursor-pointer border-b-border-color"

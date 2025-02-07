@@ -75,7 +75,7 @@ const Header = () => {
               <li
                 key={index}
                 className={`xs:hidden lg:flex text-text_primary font-semibold border-r-2 h-full border-[#506f8f] flex justify-center items-center w-[125px] ${
-                  location.pathname === item.path ? "border-red-500" : ""
+                  location.pathname === item.path ? "border-b-[#FEA55F] border-b-4" : ""
                 }`}
               >
                 <Link to={item.path} ref={(el) => (linksRef.current[index] = el)}>
@@ -109,7 +109,7 @@ const Header = () => {
               <li
                 key={index}
                 className={`text-white font-semibold border-b h-[50px] pl-4 border-[#506f8f] flex items-center ${
-                  location.pathname === item.path ? "border-red-500" : ""
+                 location.pathname === item.path ? "border-b-[#FEA55F] border-b-4" : ""
                 }`}
               >
                 <Link to={item.path} onClick={() => setMenu(false)}>

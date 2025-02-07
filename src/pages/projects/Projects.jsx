@@ -7,6 +7,7 @@ import { RiReactjsFill } from "react-icons/ri";
 import { FaHtml5 } from "react-icons/fa6";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa6";
+import MainProjects from './MainProjects';
 
 const Projects = () => {
   const [dropdown, setDropdown] = useState(false);
@@ -19,11 +20,11 @@ const Projects = () => {
    
   ];
   return (
-    <div className="bg-primary flex min-h-[calc(100vh-104px)] xs:flex-col lg:flex-row lg:flex-nowrap">
+    <div className="bg-primary flex min-h-[calc(100vh-55px)] xs:flex-col lg:flex-row lg:flex-nowrap">
       {/* Sidebar Section */}
       <h1   className="text-white lg:hidden w-full pl-2 font-FiraRegular gap-2 items-center py-2 h-[41px] relative   border-b border-r border-r-border-color cursor-pointer border-b-border-color" >
           
-          Contact Me 
+      // Project / all 
 
         </h1>
       <div className="xs:w-full lg:w-[370px]  border-r border-r-border-color">
@@ -53,16 +54,17 @@ const Projects = () => {
       </div>
 
       {/* Main Content */}
-      <div className="w-full  ">
+      <div className="w-full xs:pb-20 lg:pb-0  ">
       <h1 
          
           className="text-white xs:hidden lg:flex pl-2 font-FiraRegular gap-2 items-center py-2 h-[41px] relative   border-b border-r border-r-border-color cursor-pointer border-b-border-color"
         >
           
-          Contact Me <span className="h-full bg-border-color w-[1px] absolute left-44"></span>
+          // Project / all <span className="h-full bg-border-color w-[1px] absolute left-44"></span>
 
         </h1>
 
+        <MainProjects/>
       
       </div>
 
