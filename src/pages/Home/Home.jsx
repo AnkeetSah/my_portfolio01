@@ -106,16 +106,25 @@ const Home = () => {
       </div>
 
       {/* Profile Section */}
-      <div className="h-full xs:hidden w-[40%] lg:flex justify-center items-center">
+      <div className="absolute lg:hidden top-30 left-2 h-[200px] w-[300px] bg-[radial-gradient(circle,_rgba(67,217,173,0.6)_0%,_rgba(30,58,138,0.1)_100%)] rounded-full blur-2xl"></div>
+      <div className="absolute lg:hidden top-60 right-2 h-[200px] w-[300px] bg-[radial-gradient(circle,_rgba(77,91,206,0.6)_0%,_rgba(30,58,138,0.1)_100%)] rounded-full blur-2xl"></div>
+    
+      <div className="relative w-1/2  justify-center items-center hidden md:flex">
+        <div className="absolute  -top-2 h-[300px] left-24 w-[300px] bg-[radial-gradient(circle,_rgba(67,217,173,0.6)_0%,_rgba(30,58,138,0.1)_100%)] rounded-full blur-2xl"></div>
+        <div className="absolute  top-50 right-30 h-[300px] w-[300px] bg-[radial-gradient(circle,_rgba(77,91,206,0.6)_0%,_rgba(30,58,138,0.1)_100%)] rounded-full blur-2xl"></div>
+
         <img
-          className="h-[440px]"
+          className="relative h-[400px]  "
           ref={profileRef}
-          src="/assests/images/me.png"
+          src="../../../assests/images/me.png"
           alt="Profile"
         />
+        
       </div>
     </div>
   );
 };
 
 export default Home;
+
+
